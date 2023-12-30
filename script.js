@@ -1,4 +1,4 @@
-fetch('https://api.github.com/repos/ahmetalper0/images/contents/images.json')
+fetch('https://api.github.com/repos/ahmetalper0/database/contents/images.json')
 
     .then(response => response.json())
 
