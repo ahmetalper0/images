@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dall-E 3 | Alpır</title>
+    <title>Alper</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,13 +16,14 @@
 <body>
 
     <div class="container">
-        <div class="prompt-container">
-            <input type="text" class="prompt" placeholder="Type anything that comes to your mind">
+        <input class="prompt" type="text">
+        <button class="prompt-button">Resimleri Oluştur</button>
+        <div class="image_container">
+            <img src="https://images.openai.com/blob/bc8a8a6b-36f2-4774-bc95-c563cb32dcdd/captain.png?trim=0,0,0,0&width=2000">
+            <img src="https://images.openai.com/blob/bc8a8a6b-36f2-4774-bc95-c563cb32dcdd/botanical.png?trim=0,0,0,0&width=2000">
+            <img src="https://images.openai.com/blob/b196df3a-6fea-4d86-87b2-f9bb50be64c7/leaf.png?trim=0,0,0,0&width=2000">
+            <img src="https://images.openai.com/blob/b196df3a-6fea-4d86-87b2-f9bb50be64c7/lychee.png?trim=0,0,0,0&width=2000">
         </div>
-        <div class="button-container">
-            <button class="button" onclick="generate_image()">Oluştur</button>
-        </div>
-        <div class="image-container"></div>
     </div>
 
     <script src="script.js"></script>
