@@ -7,64 +7,42 @@ body {
     background-color: #181818;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.container {
-    width: 80vw;
-    height: 100vh;
-    /* background-color: blueviolet; */
-}
-
-.prompt-container {
-    width: 80vw;
-    height: 5vw;
-    /* background-color: aqua; */
+.container{
+    width: 1000px;
+    border-radius: 25px;
+    background-color: #181818;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
 }
 
 .prompt {
-    width: calc(80vw / 1.5);
-    height: calc(80vw / 20);
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    background-color: #313131;
+    border-radius: 15px;
+    width: 450px;
+    height: 30px;
+    margin-bottom: 35px;
+    margin-top: 35px;
 }
 
-.button-container {
-    width: 80vw;
-    height: 2vw;
-    /* background-color: rgb(43, 32, 166); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.prompt-button{
+    margin-bottom: 35px;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
 }
 
-.button {
-    width: calc(80vw / 10);
-    height: calc(80vw / 50);
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    background-color: #313131;
-}
-
-.image-container {
-    width: 80vw;
-    /* background-color: chartreuse; */
+.image_container {
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 15vw);
-    gap: 1vw;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    grid-template-columns: repeat(4, 200px);
+    gap: 25px;
 }
 
-.image-item {
+img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
