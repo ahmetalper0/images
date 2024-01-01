@@ -1,32 +1,43 @@
-fetch('https://api.github.com/repos/ahmetalper0/database/contents/images.json')
+const button = document.querySelector('.prompt-button');
 
-    .then(response => response.json())
+button.addEventListener('click', function() {
 
-    .then(data => {
+    console.log('Button clicked');
+    button.disabled = true;
 
-        const json_data = JSON.parse(atob(data.content));
-        
-        console.log(json_data)
+    const input = document.querySelector('.prompt');
 
-        const image_urls = json_data.image_urls.map(item => item.url).reverse();
+    const input_value = input.value;
 
-        const image_container = document.querySelector('.image-container');
-    
-        image_urls.forEach(url => {
+    input.value = '';
 
-            console.log(url)
-        
-            const img = document.createElement('img');
-            
-            img.src = url;
-            img.alt = 'Image';
-        
-            img.classList.add('image-item');
-            
-            image_container.appendChild(img);
-        
+    fetch(`https://698d24d3-4665-44a6-b11b-c88fa0e47444.deepnoteproject.com/${input_value}`)
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            console.log('DATA : ', data);
+
+            const image_container = document.querySelector('.image_container');
+
+            data.images.forEach(image_url => {
+
+                const image = document.createElement('img');
+
+                image.src = image_url;
+
+                image_container.insertBefore(image, image_container.firstChild);
+
+            });
+
+            button.disabled = false;
+
+        })
+
+        .catch(error => {
+            console.error('Hata :', error);
+            button.disabled = false;
         });
 
-    })
-
-    .catch(error => console.error(error));
+});
