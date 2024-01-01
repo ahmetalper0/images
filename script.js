@@ -11,7 +11,7 @@ button.addEventListener('click', function() {
 
     input.value = '';
 
-    fetch(`https://698d24d3-4665-44a6-b11b-c88fa0e47444.deepnoteproject.com/${input_value}`)
+    fetch(`https://698d24d3-4665-44a6-b11b-c88fa0e47444.deepnoteproject.com/?prompt=${input_value}`)
 
         .then(response => response.json())
 
